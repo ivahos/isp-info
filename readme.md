@@ -8,8 +8,9 @@ sudo apt install speedtest
 You also need to install the 2 crontab entries in the crontab file on the same machine you installed the cli version of speed test on. It will use scp to copy the result to your webserver so that it can be accessed by the generate_graph.py scriptt
 
 
-
+<pre>
 files:
 example.html                - Example on how to  use the python script to generate the speedtesrt graphs 
 crontab                     - crontab instructions for running the actual speedtests collectin the output in a file and copying it to the webserver
 generate_speedtest_graph.py - python script for creating the graph
+</pre>
