@@ -1,0 +1,4 @@
+# m h  dom mon dow   command
+0,15,30,45  * * * *     /usr/bin/speedtest --format=json -s 15132 >> /root/speedtest.results 2> /dev/null < /dev/null && scp -q /root//speedtest.results user@webserver:/var/www/html/speedtest.results
+5,20,35,50  * * * *     /usr/bin/speedtest --format=json -s 5744 >> /root/speedtest2.results 2> /dev/null < /dev/null && scp -q ~/speedtest2.results user@webserver:/var/www/html/speedtest2.results
+

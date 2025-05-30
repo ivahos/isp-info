@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<meta http-equiv="refresh" content="900">
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>example page</title>
+</head>
+<body>
+<h1>Speed graph for my internet connection</h1>
+Time page loaded/refreshed: <b>
+<?php
+date_default_timezone_set('Australia/Sydney');
+echo date('Y-m-d H:i:s T');
+?>
+<h2>Against speedtest server 1</h2>
+<img src="<?php echo shell_exec('/usr/bin/python3 /var/www/html/generate_speedtest_graph.py /var/www/html/speedtest.results --height 400 --tz Australia/Sydney --max-mbps 1100 --last-hours 24 --width 1300' ); ?>" alt="Speedtest Graph">
+<h2>Against speedtest server 2</h2>
+<img src="<?php echo shell_exec('/usr/bin/python3 /var/www/html/generate_speedtest_graph.py /var/www/html/speedtest2.results --height 400 --tz Australia/Sydney --max-mbps 1100 --last-hours 24 --width 1300' ); ?>" alt="Speedtest Graph">
+</body>
+</html>
