@@ -1,10 +1,12 @@
 This script needs python3 installed in addition to the python module matplotlib.
-to install this on debian run the command apt install python3 python3-matplotlib
+to install this on debian run the command 
+<pre>apt install python3 python3-matplotlib</pre>
 you will also need to install php and enable this in your webserver
 you also need to install ooklas cli version of speed test on a machine at home that is up at all times. I use a VM running debian for this:
+<pre>
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 sudo apt install speedtest
-
+</pre>
 You also need to install the 2 crontab entries in the crontab file on the same machine you installed the cli version of speed test on. It will use scp to copy the result to your webserver so that it can be accessed by the generate_graph.py scriptt
 
 
